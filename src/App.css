@@ -1,54 +1,90 @@
 @font-face {
-  font-family: 'huakang';
-  src: url('../public/font/shu_round.TTF');
+  font-family: "huakang";
+  src: url("../public/font/shu_round.TTF");
   /* need to be ttf can't be ttc  */
 }
-                                                          
+
+html {
+  cursor: url("../public/image/cursor.png"), auto;
+  /* 尺寸需要32*32 */
+}
+
+head {
+  margin: 0%;
+}
+
 body {
-  font-family: 'huakang';
+  font-family: "huakang";
   font-size: 40px;
-  color: #38c51c;
-  background: url('../public/image/bg.png');
+  color: #a31cc5;
+  background: url("../public/image/bg.png");
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
 }
 
 .App {
-  text-align: center;
-  cursor : url('../public/image/cursor.png'), auto;
-  /* 尺寸需要32*32 */
-  padding: auto;
+  /* text-align: center; */
+
 }
 
 
-/*
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-*/
 
 .bg {
   background-image: url(../public/image/bg.png);
   background-size: "cover";
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-position: center;
-  }
+}
 
-
-.footer {
-    text-align: right;
-    padding: 0px 0px 100px 20px;
-    cursor : url('../public/image/cursor.png'), pointer;
-    margin-top: 200px;
+footer {
+  position: fixed;
+  bottom: 0.2%;
+  width: 98%;
+  text-align: right;
+  padding: 0px 0px 0px 20px;
 }
 
 a {
   padding: 8px;
+  cursor: url("../public/image/cursor2.png"), auto;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: url("../public/image/cursor2.png"), auto;
+  outline: none;
+}
+
+#target_1 {
+  position: absolute;
+  top: 175px;
+  left: 200px;
+}
+
+#target_2 {
+  position: absolute;
+  top: 400px;
+  left: 620px;
+}
+
+#target_3 {
+  position: absolute;
+  top: 230px;
+  left: 600px;
+}
+
+#target_4 {
+  position: absolute;
+  top: 280px;
+  left: 150px;
+}
+
+.countText{
+  font-size:x-large;
+  font-weight:800;
+  font-family:'Segoe UI';
+  position:absolute;
+  /* top: 70%; */
+  left: 45%;
 }
