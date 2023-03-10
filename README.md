@@ -64,3 +64,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 * shu 推特/YT 連結
 * 背景
 * demo 圖片
+
+---
+## firebase
+- 安裝
+`npm install -g firebase-tools`
+如果出現 Can't resolve 'firebase/app'嘗試執行 `npm install firebase`
+- 新增FireBaseConfig.js貼上 firebase那串程式碼
