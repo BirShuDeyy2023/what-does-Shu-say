@@ -14,7 +14,7 @@ export default class Test_page extends React.Component {
         super(props);
         this.state={
             clickNum:0,
-            // totalCount:null,
+            isLoaded: false,
         }
     }
 
@@ -28,17 +28,19 @@ export default class Test_page extends React.Component {
             }));
             console.log("fireBase_Data:",filterData[0].TotalCount);
             this.setState({totalCount: filterData[0].TotalCount});
+            this.setState({isLoaded:true});
         } catch (err) {
             console.error(err);
         }
     };
+
+    
 
     async updateCount(){
         const testDoc = doc(db,"test","GXJ0qbJE281fII5CTaVq");
         // console.log("update:",testDoc)
         const nowCount = this.state.totalCount+1
         console.log("update:",nowCount)
-        // await updateDoc(testDoc,{TotalCount: nowCount});
         this.setState({totalCount:nowCount});
         await updateDoc(testDoc,{TotalCount: nowCount});
     };
@@ -46,8 +48,7 @@ export default class Test_page extends React.Component {
 
 
     componentDidMount() {
-        this.getdata();
-        setInterval(1000)
+        this.getdata()
     }
 
     
@@ -63,18 +64,22 @@ export default class Test_page extends React.Component {
 
 
     render(){
-        return (
-            <div className="mainText">
-                {console.log("this.state.clickNum:",this.state.clickNum)}
-                <p>clickNum: {this.state.clickNum}</p>
-                <Button variant="primary" onClick={() => this.clickCount()}>Click</Button> <br/>
+        const {isLoaded} = this.state;
+        if (isLoaded) {
+            return (
+                <div className="mainText">
+                    {console.log("isLoaded:",this.state.isLoaded)}
+                    {console.log("this.state.clickNum:",this.state.clickNum)}
+                    <p>clickNum: {this.state.clickNum}</p>
+                    <Button variant="primary" onClick={() => this.clickCount()}>Click</Button> <br/>
 
-                {console.log("this.state.totalCount:",this.state.totalCount)}
-                <p>totalCount: {this.state.totalCount}</p>
-                {console.log("=========")}
-            </div>
-            
-          )
+                    {console.log("this.state.totalCount:",this.state.totalCount)}
+                    <p>totalCount: {this.state.totalCount}</p>
+                    {console.log("=========")}
+                </div>
+                
+            )
+        }
     }
   
 }

@@ -6,6 +6,7 @@ import App from './App';
 import Test_page from './Test_page';
 import './css/bootstrap.min.css';
 import App2 from './App2';
+import Test_page2 from './Test_page2';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,6 +14,7 @@ root.render(
     {/* <App /> */}
     {/* <Test_page /> */}
     <App2 />
+    {/* <Test_page2 /> */}
   </React.StrictMode>
 );
 
