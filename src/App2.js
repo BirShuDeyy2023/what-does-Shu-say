@@ -6,7 +6,7 @@ import house_1 from './target';
 import Test_page  from './Test_page';
 import './App.css';
 import { Button } from 'react-bootstrap';
-import {db} from "./FireBaseConfig";
+import {db} from "./firebaseconfig";
 import {getDocs, updateDoc, collection, doc} from "firebase/firestore";
 
 export default class App2 extends React.Component  {

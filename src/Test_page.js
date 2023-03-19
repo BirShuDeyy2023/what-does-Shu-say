@@ -3,7 +3,7 @@ import './App.css';
 import { Button } from 'react-bootstrap';
 // import firebase from 'firebase';
 // import FireBaseConfig from './FireBaseConfig';
-import {db} from "./FireBaseConfig";
+import {db} from "./firebaseconfig";
 import {getDocs, updateDoc, collection, doc} from "firebase/firestore";
 
 
