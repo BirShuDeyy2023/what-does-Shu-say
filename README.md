@@ -75,5 +75,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ---
 ## 集點卡
 - 新增集點卡
-- 目前已做功能：從json檔抓取目前的圖片資料語音檔來源url
+- 目前已做功能：從excel檔抓取目前的圖片資料語音檔來源url (使用excel表存成csv -> csv轉json格式存在txt(用python轉的)，放在public/collect_form.txt)
 - 還差：儲存點擊到的圖片變數
