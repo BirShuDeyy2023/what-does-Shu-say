@@ -60,7 +60,7 @@ function ScrollableModal() {
                                 <img src={'./image/collect/'+csvdata[i-1].unlock_img+'.png'} width={60} alt={'img_'+{i}} />
                                 <div className="icon-desc">
                                 <img src='./image/youtube.png' width={20} alt='youtubeicon' />
-                                <a href={csvdata[i-1].stream_link}>{csvdata[i-1].stream_name}</a></div>
+                                <a href={csvdata[i-1].stream_link} target="_blank" rel="noopener noreferrer">{csvdata[i-1].stream_name}</a></div>
                             </div>
                         )
                     }else{
