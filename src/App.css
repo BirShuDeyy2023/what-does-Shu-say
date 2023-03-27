@@ -205,8 +205,8 @@ img[alt*="shu"] {
   /* max-width: 640px; */
   background-color: #fff;
   overflow-y: auto;
-  
 }
+
 
 #scrollitem{
   /* display: flex;
@@ -242,5 +242,3 @@ img[alt*="shu"] {
   border-radius: 5px;
   z-index:1;
 }
-
-

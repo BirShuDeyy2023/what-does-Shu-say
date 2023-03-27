@@ -1,6 +1,6 @@
 // 音效
-
-export const playSound = (soundName) => {
-    const sound = new Audio(`/sounds/${soundName}.mp3`);
-    sound.play();
+export function playSound(newRandomNumber) {
+    const audioPath = `./audio/spvoice_${newRandomNumber}.mp3`;
+    const audio = new Audio(audioPath);
+    audio.play();
 }

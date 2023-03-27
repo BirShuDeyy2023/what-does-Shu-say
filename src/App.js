@@ -9,6 +9,7 @@ import 'firebase/database';
 import Popup from './popup';
 import ScrollableModal from './scroll';
 
+
 function App() {
   const twlink = "https://twitter.com/shu_yamino";
   const y2link = "https://www.youtube.com/@ShuYamino";
@@ -17,6 +18,8 @@ function App() {
   // }, []);
   // popup stting
   const [buttonPopup, setButtonPopup] = useState(false);
+
+
 
   return (
     <div className="App">
@@ -36,7 +39,8 @@ function App() {
         {/* popup page */}
         {/* <button><img src="./image/savepoint.png" onClick={() => setButtonPopup(true)} width={80} id="collect" alt='collector' /></button>
         <Popup position="top center" trigger={buttonPopup} setTrigger={setButtonPopup} /> */}
-        <ScrollableModal />
+        <ScrollableModal/>
+
       </div>
 
 

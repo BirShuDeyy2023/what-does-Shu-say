@@ -1,12 +1,13 @@
 import React from 'react'
 // import {useState} from 'react'
-//import { Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import './App.css';
 // import firebase from 'firebase';
 // import FireBaseConfig from './FireBaseConfig';
 import { db } from "./firebaseconfig";
 import { getDocs, updateDoc, collection, doc } from "firebase/firestore";
 import { playSound } from './audio';
+import ScrollableModal from './scroll.js';
 
 
 
@@ -17,8 +18,25 @@ export default class TEST_PAGE extends React.Component {
             clickNum: 0,
             // totalCount:null,
             isLoaded: false,
+            voice_id:[],
+            show:false,
+            
         }
+        this.handleClose = this.handleClose.bind(this);
+        this.handleShow = this.handleShow.bind(this);
     }
+
+
+    handleShow(){
+        this.setState({ show: true });
+        console.log("this.state.show:",this.state.show)
+    }
+
+    handleClose(){
+        this.setState({ show: false });
+        console.log("this.state.show:",this.state.show)
+    }
+
 
 
     async getdata() {
@@ -50,7 +68,8 @@ export default class TEST_PAGE extends React.Component {
 
     componentDidMount() {
         this.getdata();
-        setInterval(1000)
+        setInterval(1000);
+        
     }
 
 
@@ -61,13 +80,17 @@ export default class TEST_PAGE extends React.Component {
         this.setState({ clickNum: n });
         this.updateCount();
         //生成一到六的隨機數字
-        const newRandomNumber = Math.floor(Math.random() * 6) + 1;
+        const newRandomNumber = Math.floor(Math.random() * 6) + 1; 
         //把數字丟到選擇器裡面 即顯示隨機spshu
         const show = document.querySelector('#spshu_' + newRandomNumber);
         //把randomnumber傳入audio找到對應
-        const handleClick = () => {
-            playSound(newRandomNumber);
-        }
+        playSound(newRandomNumber);
+
+        //儲存變數
+        this.setState(prevState => ({
+            voice_id: [...new Set([...prevState.voice_id, newRandomNumber])]
+          }));
+        
 
         //把隱藏屬性block掉
         show.style.display = 'block';
@@ -92,6 +115,7 @@ export default class TEST_PAGE extends React.Component {
                     <p>clickNum: {this.state.clickNum} ,totalCount: {this.state.totalCount}</p>
                     {console.log("=========")}
                     {/* <button id='clickbtn' onClick={() => this.clickCount()}>Click</button> */}
+                    
 
 
                     <button onClick={() => this.clickCount()}>
@@ -120,8 +144,21 @@ export default class TEST_PAGE extends React.Component {
                     <img src="./image/shu_10.png" style={{ display: 'none' }} width={240} id="spshu_4" alt='spshu' />
                     <img src="./image/shu_15.png" style={{ display: 'none' }} width={135} id="spshu_5" alt='spshu' />
                     <img src="./image/shu_28.png" style={{ display: 'none' }} width={130} id="spshu_6" alt='spshu' />
-                </div>
+                
+                
+                    
+                    <Button variant="primary" onClick={this.handleShow}>
+                        <img src="./image/savepoint.png" width={80} id="collect" alt='collector' />
+                    </Button>
 
+                    <ScrollableModal 
+                            voice_id={this.state.voice_id} 
+                            show={this.state.show} 
+                            onHide={this.handleClose}
+                    />
+                    
+
+                </div>
             )
         }
     }
