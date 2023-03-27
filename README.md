@@ -75,6 +75,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ---
 ## 集點卡
 - 新增集點卡
-- 目前已做功能：從excel檔抓取目前對應的圖片資料語音檔來源url (使用excel表存成csv -> csv轉json格式存在txt(用python轉的)，放在public/collect_form.txt)
-- 還差：儲存點擊到的圖片變數存至getVoiceNo
-- 之後需要：完整的excel檔包含(來源直播名稱、直播連結、圖片檔名稱、音檔名稱)
+- 目前已做功能：儲存點擊到的voice變數存至getVoiceNo，從excel檔抓取目前對應的圖片資料語音檔來源url (使用excel表存成csv -> csv轉json格式存在txt(用python轉的)，放在public/collect_form.txt)
+- 之後需要：完整的excel檔包含(來源直播名稱、直播連結、圖片檔名稱、音檔名稱)，確認voice是否為unique數字，是否需要其他變數取代
