@@ -51,34 +51,24 @@ function ScrollableModal(props) {
         <>
             <Modal show={show} onHide={handleClose} scrollable id='scroll'>
                 <Modal.Header closeButton>
-                    <Modal.Title>lez see how many Shu u've got</Modal.Title>
+                    <Modal.Title style={{ color:'#bc4ad9'}}><b>lez see how many Shu u've got</b></Modal.Title>
                 </Modal.Header>
                 <Modal.Body id='scrollcontent'>
-                    <div id='scrollitem' style={{ height: '300px',width: '600px', overflowY: 'auto',  padding: '0px 60px 20px 60px' }}>
-                    {/* <div style={{ height: '300px',width: '600px', overflowY: 'auto' }}>
-                        {[...Array(50)].map((_, i) => (
-                            <p key={i}>Scrollable Content {i}</p>
-                        ))}
-                    </div> */}
-
-                    {/* {console.log("scroll_props.voice_id:",props.voice_id)} */}
-
-                    
-                    
+                    <div id='scrollitem' style={{ height: '300px',width: '620px', overflowY: 'auto',  padding: '0px 70px 30px 70px' }}>
 
                     {/*集點功能判斷式getVoiceNo*/}
                     {allVoiceNo.map(i=>{
                     if(Array.isArray(voice_id2) && voice_id2.includes(i)){
                         return(
                             <div class='lockicon' key={i}>
-                                <img src={'./image/collect/'+csvdata[i-1].unlock_img+'.png'} width={60} alt={'img_'+{i}} />
+                                <img src={'./image/collect/'+csvdata[i-1].unlock_img+'.png'} width={70} alt={'img_'+{i}} />
                                 <div className="icon-desc">
-                                <img src='./image/youtube.png' width={20} alt='youtubeicon' />
-                                <a href={csvdata[i-1].stream_link} target="_blank" rel="noopener noreferrer">{csvdata[i-1].stream_name}</a></div>
+                                <img src='./image/youtube.png' width={20} alt='youtubeicon' /> <br/>
+                                <a href={csvdata[i-1].stream_link} target="_blank" rel="noopener noreferrer">{csvdata[i-1].voice_name}</a></div>
                             </div>
                         )
                     }else{
-                        if([1, 3, 5].includes(i)){ //sp改成不同顏色
+                        if([1,4,7,10,15,28].includes(i)){ //sp改成不同顏色
                             return(
                                 <div class='lockicon' key={i}>
                                     <img src='./image/lock_sp.png' width={60} alt='lockicon' />
