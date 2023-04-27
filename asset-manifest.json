@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/testwesite.github.io/static/css/main.833e1c5f.css",
+    "main.js": "/testwesite.github.io/static/js/main.18ca8087.js",
+    "static/media/shu_round.TTF": "/testwesite.github.io/static/media/shu_round.c51ae16b1faae259c1a7.TTF",
+    "static/media/bg.png": "/testwesite.github.io/static/media/bg.08da1856add83d6c3d62.png",
+    "static/media/BG3.png": "/testwesite.github.io/static/media/BG3.989f57d12199bb5b1549.png",
+    "index.html": "/testwesite.github.io/index.html",
+    "main.833e1c5f.css.map": "/testwesite.github.io/static/css/main.833e1c5f.css.map",
+    "main.18ca8087.js.map": "/testwesite.github.io/static/js/main.18ca8087.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.833e1c5f.css",
+    "static/js/main.18ca8087.js"
+  ]
+}
