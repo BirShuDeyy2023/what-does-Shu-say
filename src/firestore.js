@@ -103,7 +103,7 @@ export default class TEST_PAGE extends React.Component {
     }
 
     //播放聲音
-    // playSound(newRandomNumber);
+    playSound(newRandomNumber);
 
     this.setState({ num: newRandomNumber, normalshu: shu1to4 });
 
