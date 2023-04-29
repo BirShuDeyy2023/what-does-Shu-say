@@ -15,7 +15,7 @@ function ScrollableModal(props) {
 
     useEffect(() => {
         async function fetchData() {
-            await fetch("./collect_form.txt")
+            await fetch("./collect_form_no.txt")
             .then((response) => response.text())
             .then(data => setCsvdata(JSON.parse(data)))
         }
