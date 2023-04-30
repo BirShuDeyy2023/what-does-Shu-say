@@ -1,3 +1,15 @@
+This site is For Shu Yamino 2023 birthday eyyyyy
+
+welcomecomecome to this Bug-storage 
+
+in this repository we have layout-bugs showing-bugs and even logic-bugs
+
+anyway have fun playing the game and hope u find the secret surprise inside our web
+
+---
+
+F12
+
 ## 下載須知
 
 - 最新進度都在 develop
