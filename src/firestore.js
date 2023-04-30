@@ -8,6 +8,7 @@ import { db } from "./firebaseconfig";
 import { getDocs, updateDoc, collection, doc } from "firebase/firestore";
 import { playSound } from "./audio";
 import ScrollableModal from "./scroll.js";
+import 'animate.css/animate.min.css';
 
 export default class TEST_PAGE extends React.Component {
   constructor(props) {
@@ -179,13 +180,15 @@ export default class TEST_PAGE extends React.Component {
 
             {/* 特殊shu */}
             <img
+              className={"animate__animated animate__zoomIn"}
               src="./image/shu_01.png"
               style={{ display: "none" }}
-              width={140}
+              width={800}
               id="spshu_1"
               alt="spshu"
             />
             <img
+              className={"animate__animated animate__flip"}
               src="./image/shu_4.png"
               style={{ display: "none" }}
               width={120}
@@ -193,6 +196,7 @@ export default class TEST_PAGE extends React.Component {
               alt="spshu"
             />
             <img
+              className={"animate__animated animate__zoomInRight"}
               src="./image/shu_07.png"
               style={{ display: "none" }}
               width={170}
@@ -210,6 +214,7 @@ export default class TEST_PAGE extends React.Component {
             </button>
 
             <img
+              className={"animate__animated animate__slideInUp"}
               src="./image/shu_10.png"
               style={{ display: "none" }}
               width={200}
@@ -217,6 +222,7 @@ export default class TEST_PAGE extends React.Component {
               alt="spshu"
             />
             <img
+              className={"animate__animated animate__fadeInTopLeft"}
               src="./image/shu_15.png"
               style={{ display: "none" }}
               width={135}
@@ -224,12 +230,13 @@ export default class TEST_PAGE extends React.Component {
               alt="spshu"
             />
             <img
+              className={"animate__animated animate__rotateInUpLeft"}
               src="./image/shu_28.png"
               style={{ display: "none" }}
               width={130}
               id="spshu_6"
               alt="spshu"
-            />
+            />s
             {/* 一般shu */}
             <img
               src="./image/norshu_1.png"
