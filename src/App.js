@@ -10,6 +10,7 @@ import 'firebase/database';
 import ScrollableModal from './scroll';
 //提示訊息
 import AlertMessage from './alert';
+import React, { useState,useEffect } from 'react';
 
 function App() {
   const twlink = "https://twitter.com/shu_yamino";
@@ -19,9 +20,30 @@ function App() {
   // }, []);
   // popup stting
   // const [buttonPopup, setButtonPopup] = useState(false); 使用react寫法的時候再啟用
+  
+  const [clickcount,setClickcount] = useState(0)
+  const handleChildValue = (value) => {
+    setClickcount(value);
+  };
+
+  
+
+  const bgImageCount = (Math.floor(clickcount / 100) % 2 === 0) ? 1 : 2;
+  const nowBG = `./image/bg_0${bgImageCount}.png`;
+
 
   return (
-    <div className="App">
+    <div className="App"
+    style={{
+      backgroundImage: `url(${nowBG})`,
+      backgroundPosition: "center",
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: "cover",
+      width: '100%',
+      height: '100vh',
+      margin: "0",
+    }}
+    >
       <div>
         <HelmetExport>
           {/* <link rel="icon" href="%PUBLIC_URL%/yaminerd.png" /> */}
@@ -32,7 +54,7 @@ function App() {
 
       <div className='content'>
 
-        <TEST_PAGE />
+        <TEST_PAGE onChildValue={handleChildValue}/>
 
         {/* popup page */}
         {/* <button><img src="./image/savepoint.png" onClick={() => setButtonPopup(true)} width={80} id="collect" alt='collector' /></button>

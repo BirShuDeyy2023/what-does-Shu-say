@@ -110,6 +110,8 @@ export default class TEST_PAGE extends React.Component {
     this.setState((prevState) => ({
       voice_id: [...new Set([...prevState.voice_id, newRandomNumber])],
     }));
+
+    this.props.onChildValue(this.state.clickNum);
   }
 
   // rannum = () => {
@@ -257,7 +259,7 @@ export default class TEST_PAGE extends React.Component {
           {/* 集點功能 */}
           <Button variant="primary" onClick={this.handleShow}>
             <img
-              src="./image/savepoint.png"
+              src="./image/savepoint2.png"
               width={80}
               id="collect"
               alt="collector"
