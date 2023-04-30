@@ -1,7 +1,8 @@
 @font-face {
   font-family: "huakang";
-  src: url("../public/font/shu_round.TTF");
+  /* src: url("../public/font/shu_round.TTF"); */
   /* need to be ttf can't be ttc  */
+  src: url("../public/font/huakangPOP1.TTF");
 }
 
 html {
@@ -18,7 +19,7 @@ body {
   text-align: center;
   font-family: "huakang";
   font-size: 30px;
-  color: #a31cc5;
+  color: #ad4dc4;
   background: url("../public/image/bg.png");
   background-position: top;
   background-repeat: no-repeat;
@@ -27,7 +28,13 @@ body {
   border: 0;
   padding: 0;
 }
+.countnumber {
+  font-size: 40px;
+}
 
+.secret {
+  font-size: 20px;
+}
 /* 設定背景 */
 .bg {
   background-image: url(../public/image/bg.png);
@@ -316,7 +323,7 @@ img[alt*="shu"] {
   /* width: 100%; */
   /* max-width: 640px; */
   /* background-color: #fff; */
-  background-image: url('../public/image/BG3.png');
+  background-image: url("../public/image/BG3.png");
   overflow-y: auto;
 }
 
@@ -353,12 +360,12 @@ img[alt*="shu"] {
 }
 
 #alertpage {
-  margin-top: 7%;
-  margin-left: 35%;
+  position: absolute;
+  top: 15%;
+  left: 25%;
   padding: 1.2%;
-  width: 500px;
-  height: 250px;
+  width: 50%;
+  height: 60%;
   border-radius: 20px;
-  position: relative;
   background-color: #fff;
 }

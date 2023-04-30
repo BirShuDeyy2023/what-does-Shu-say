@@ -127,15 +127,19 @@ export default class TEST_PAGE extends React.Component {
       return (
         <div className="mainText">
           {/* 測試用 之後會刪掉 */}
-          <h2>
-            rightnow={this.state.num} normalshu={this.state.normalshu}
+          <h2 style={{ color: "#63b4e7" }} className="secret">
+            {/* rightnow={this.state.num} normalshu={this.state.normalshu} */}
+            F12
           </h2>
           {console.log("this.state.clickNum:", this.state.clickNum)}
           {/* <p>clickNum: {this.state.clickNum}</p> */}
-          {console.log("this.state.totalCount:", this.state.totalCount)}
-          <p>
-            clickNum: {this.state.clickNum} ,totalCount: {this.state.totalCount}
-          </p>
+          <div className="countnumber">
+            {console.log("this.state.totalCount:", this.state.totalCount)}
+            <p>
+              Ugot {this.state.clickNum} Shu, totalShuCount:{" "}
+              {this.state.totalCount}
+            </p>
+          </div>
           {console.log("=========")}
           {/* <button id='clickbtn' onClick={() => this.clickCount()}>Click</button> */}
 
@@ -259,7 +263,7 @@ export default class TEST_PAGE extends React.Component {
           {/* 集點功能 */}
           <Button variant="primary" onClick={this.handleShow}>
             <img
-              src="./image/savepoint2.png"
+              src="./image/savepoint.png"
               width={80}
               id="collect"
               alt="collector"
