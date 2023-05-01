@@ -59,12 +59,11 @@ function AlertMessage() {
             dismissible
             id="alertpage"
           >
-            Welcome eyyyyy
-            <br />
-            <p>Web browsing only !!!</p>
-            <p>this site is powered by birthdayShu2023 team</p>
-            <p>try to use UNKO-KUN(the cursor),to click on ANYTHING you can</p>
-            <p>credits:</p>
+            <p className="txt-p1">Welcome eyyyyy</p>
+            <p className="txt-p">Web browsing only !!!</p>
+            <p className="txt-p">this site is powered by birthdayShu2023 team</p>
+            <p className="txt-p">try to use UNKO-KUN(the cursor),to click on ANYTHING you can</p>
+            <p className="txt-p">credits:</p>
             <a
               href="https://twitter.com/SHUBD2023"
               target="_blank"

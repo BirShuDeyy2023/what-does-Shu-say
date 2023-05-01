@@ -69,7 +69,7 @@ function ScrollableModal(props) {
                             </div>
                         )
                     }else{
-                        if([1,4,7,10,15,28].includes(i)){ //sp改成不同顏色
+                        if([1,2,3,4,5,6].includes(i)){ //sp改成不同顏色
                             return(
                                 <div class='lockicon' key={i}>
                                     <img src='./image/lock_sp.png' width={60} alt='lockicon' />

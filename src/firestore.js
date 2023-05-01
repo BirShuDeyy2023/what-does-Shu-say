@@ -177,13 +177,21 @@ export default class TEST_PAGE extends React.Component {
                 alt="stage1_1"
               />
             </button>
+            <button onClick={() => this.clickCount()}>
+              <img
+                src="./image/t4.png"
+                width={190}
+                id="target_5"
+                alt="stage1_1"
+              />
+            </button>
 
             {/* 特殊shu */}
             <img
               className={"animate__animated animate__zoomIn"}
               src="./image/shu_01.png"
               style={{ display: "none" }}
-              width={800}
+              width={120}
               id="spshu_1"
               alt="spshu"
             />
@@ -203,16 +211,6 @@ export default class TEST_PAGE extends React.Component {
               id="spshu_3"
               alt="spshu"
             />
-
-            <button onClick={() => this.clickCount()}>
-              <img
-                src="./image/t4.png"
-                width={190}
-                id="target_5"
-                alt="stage1_1"
-              />
-            </button>
-
             <img
               className={"animate__animated animate__slideInUp"}
               src="./image/shu_10.png"
@@ -236,7 +234,7 @@ export default class TEST_PAGE extends React.Component {
               width={130}
               id="spshu_6"
               alt="spshu"
-            />s
+            />
             {/* 一般shu */}
             <img
               src="./image/norshu_1.png"
