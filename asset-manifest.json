@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/what-does-Shu-say/static/css/main.5ffab49f.css",
-    "main.js": "/what-does-Shu-say/static/js/main.0390120d.js",
+    "main.css": "/what-does-Shu-say/static/css/main.f3557245.css",
+    "main.js": "/what-does-Shu-say/static/js/main.4040871a.js",
     "static/media/huakangPOP1.TTF": "/what-does-Shu-say/static/media/huakangPOP1.07223e0f225c4e98bb3b.TTF",
     "static/media/bg.png": "/what-does-Shu-say/static/media/bg.08da1856add83d6c3d62.png",
     "static/media/BG3.png": "/what-does-Shu-say/static/media/BG3.989f57d12199bb5b1549.png",
     "index.html": "/what-does-Shu-say/index.html",
-    "main.5ffab49f.css.map": "/what-does-Shu-say/static/css/main.5ffab49f.css.map",
-    "main.0390120d.js.map": "/what-does-Shu-say/static/js/main.0390120d.js.map"
+    "main.f3557245.css.map": "/what-does-Shu-say/static/css/main.f3557245.css.map",
+    "main.4040871a.js.map": "/what-does-Shu-say/static/js/main.4040871a.js.map"
   },
   "entrypoints": [
-    "static/css/main.5ffab49f.css",
-    "static/js/main.0390120d.js"
+    "static/css/main.f3557245.css",
+    "static/js/main.4040871a.js"
   ]
 }
