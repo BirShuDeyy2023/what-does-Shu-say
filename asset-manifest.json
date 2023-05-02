@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/what-does-Shu-say/static/css/main.fca16239.css",
+    "main.css": "/what-does-Shu-say/static/css/main.b63f574e.css",
     "main.js": "/what-does-Shu-say/static/js/main.3518a198.js",
     "static/media/huakangPOP1.TTF": "/what-does-Shu-say/static/media/huakangPOP1.07223e0f225c4e98bb3b.TTF",
     "static/media/bg.png": "/what-does-Shu-say/static/media/bg.08da1856add83d6c3d62.png",
     "static/media/BG3.png": "/what-does-Shu-say/static/media/BG3.989f57d12199bb5b1549.png",
     "index.html": "/what-does-Shu-say/index.html",
-    "main.fca16239.css.map": "/what-does-Shu-say/static/css/main.fca16239.css.map",
+    "main.b63f574e.css.map": "/what-does-Shu-say/static/css/main.b63f574e.css.map",
     "main.3518a198.js.map": "/what-does-Shu-say/static/js/main.3518a198.js.map"
   },
   "entrypoints": [
-    "static/css/main.fca16239.css",
+    "static/css/main.b63f574e.css",
     "static/js/main.3518a198.js"
   ]
 }
