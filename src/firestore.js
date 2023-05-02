@@ -8,7 +8,7 @@ import { db } from "./firebaseconfig";
 import { getDocs, updateDoc, collection, doc } from "firebase/firestore";
 import { playSound } from "./audio";
 import ScrollableModal from "./scroll.js";
-import 'animate.css/animate.min.css';
+import "animate.css/animate.min.css";
 
 export default class TEST_PAGE extends React.Component {
   constructor(props) {
@@ -74,7 +74,7 @@ export default class TEST_PAGE extends React.Component {
     this.updateCount();
     // 生成一到六的隨機數字
     const newRandomNumber = Math.floor(Math.random() * 30) + 1;
-    const shu1to4 = Math.floor(Math.random() * 4) + 1;
+    const shu1to4 = Math.floor(Math.random() * 8) + 1;
     // 取得前一次更新的 state
     const { num } = this.state;
     const { normalshu } = this.state;
@@ -130,7 +130,7 @@ export default class TEST_PAGE extends React.Component {
           {/* 測試用 之後會刪掉 */}
           <h2 style={{ color: "#63b4e7" }} className="secret">
             {/* rightnow={this.state.num} normalshu={this.state.normalshu} */}
-            F12
+            Welcome to the scuffest shu-bd project ever
           </h2>
           {console.log("this.state.clickNum:", this.state.clickNum)}
           {/* <p>clickNum: {this.state.clickNum}</p> */}
@@ -177,21 +177,13 @@ export default class TEST_PAGE extends React.Component {
                 alt="stage1_1"
               />
             </button>
-            <button onClick={() => this.clickCount()}>
-              <img
-                src="./image/t4.png"
-                width={190}
-                id="target_5"
-                alt="stage1_1"
-              />
-            </button>
 
             {/* 特殊shu */}
             <img
               className={"animate__animated animate__zoomIn"}
               src="./image/shu_01.png"
               style={{ display: "none" }}
-              width={120}
+              width={800}
               id="spshu_1"
               alt="spshu"
             />
@@ -199,7 +191,7 @@ export default class TEST_PAGE extends React.Component {
               className={"animate__animated animate__flip"}
               src="./image/shu_4.png"
               style={{ display: "none" }}
-              width={120}
+              width={100}
               id="spshu_2"
               alt="spshu"
             />
@@ -211,6 +203,16 @@ export default class TEST_PAGE extends React.Component {
               id="spshu_3"
               alt="spshu"
             />
+
+            <button onClick={() => this.clickCount()}>
+              <img
+                src="./image/t4.png"
+                width={190}
+                id="target_5"
+                alt="stage1_1"
+              />
+            </button>
+
             <img
               className={"animate__animated animate__slideInUp"}
               src="./image/shu_10.png"
@@ -239,29 +241,57 @@ export default class TEST_PAGE extends React.Component {
             <img
               src="./image/norshu_1.png"
               style={{ display: "none" }}
-              width={70}
+              width={100}
               id="norshu_1"
               alt="norshu"
             />
             <img
               src="./image/norshu_2.png"
               style={{ display: "none" }}
-              width={93}
+              width={100}
               id="norshu_2"
               alt="norshu"
             />
             <img
               src="./image/norshu_3.png"
               style={{ display: "none" }}
-              width={70}
+              width={100}
               id="norshu_3"
               alt="norshu"
             />
             <img
               src="./image/norshu_4.png"
               style={{ display: "none" }}
-              width={60}
+              width={120}
               id="norshu_4"
+              alt="norshu"
+            />
+            <img
+              src="./image/norshu_4.png"
+              style={{ display: "none" }}
+              width={120}
+              id="norshu_5"
+              alt="norshu"
+            />
+            <img
+              src="./image/norshu_2.png"
+              style={{ display: "none" }}
+              width={100}
+              id="norshu_6"
+              alt="norshu"
+            />
+            <img
+              src="./image/norshu_3.png"
+              style={{ display: "none" }}
+              width={100}
+              id="norshu_7"
+              alt="norshu"
+            />
+            <img
+              src="./image/norshu_1.png"
+              style={{ display: "none" }}
+              width={100}
+              id="norshu_8"
               alt="norshu"
             />
           </div>

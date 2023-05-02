@@ -77,148 +77,76 @@ img {
   /* Standard syntax */
 }
 
-@media screen and (min-width: 1200px) {
-  /* 在屏幕宽度大等于1000px时应用的样式 */
-  .main_components {
-    position: relative;
-    margin-left: 16%;
-    margin-top: -4.5%;
+/* target即房屋，各自指定絕對位置 */
+@keyframes move1 {
+  from {
+    transform: translate(165px, 220px); /* 起點位置 */
   }
-
-  #target_1 {
-    margin-left: -15%;
-    margin-top: -6%;
-    width: 16%;
-  }
-  #spshu_2{
-    margin-left: -15%;
-    margin-top: -11%;
-    width: 30%;
-    /* z-index:9999; */
-  }
-
-  #target_2{
-    margin-left: -3%;
-    margin-top: -3%;
-    width: 17%;
-  }
-  #spshu_6 {
-    margin-left: -5%;
-    margin-top: -3%;
-    width: 30%;
-    /* z-index:9999; */
-  }
-
-  #target_3 {
-    margin-left: -4%;
-    margin-top: -7%;
-    width: 14%;
-  }
-  #spshu_1{
-    margin-left: -3%;
-    margin-top: -8.7%;
-    width: 30%;
-    /* z-index:9999; */
-    /* position: relative; */
-  }
-
-  #target_4{
-    margin-left: -20%;
-    margin-top: -4%;
-    width: 27%;
-  }
-  #spshu_4 {
-    margin-left: -20%;
-    margin-top: -6%;
-    width: 30%;
-    /* z-index:9999; */
-  }
-
-  #target_5 {
-    margin-left: 7%;
-    margin-top: -4%;
-    width: 17%;
-  }
-  #spshu_3 {
-    margin-left: -3%;
-    margin-top: -6%;
-    width: 30%;
-    /* z-index:9999; */
-  }
-
-  #spshu_5 {
-    margin-left: -13%;
-    margin-top: -10%;
-    width: 16%;
-    /* z-index:9999; */
-  }
-
-  /* #spshu_1 {
-    margin-top: -5.7%;
-  } */
-
-  /* #spshu_6 {
-    margin-top: -12%;
-  } */
-
-  #norshu_1 {
-    transform: rotate(-15deg);
-    margin-left: -10%;
-    width: 7%;
-  }
-
-  #norshu_2 {
-    margin-left: -25%;
-    margin-top: auto;
-    width: 9%;
-  }
-
-  #norshu_3 {
-    margin-left: 8%;
-    margin-top: -8.7%;
-    width: 9%;
-  }
-
-  #norshu_4 {
-    margin-left: -7%;
-    margin-top: -8%;
-    width: 9%;
-  }
-  #collect {
-    width: 8%;
+  to {
+    transform: translate(200px, 30px); /* 終點位置 */
   }
 }
-
-
-/* target即房屋，各自指定絕對位置 */
 #target_1 {
   position: absolute;
   top: 165px;
   left: 220px;
+  animation: move1 3s ease-in-out infinite alternate;
 }
-
+@keyframes move2 {
+  from {
+    transform: translate(50px, 0px); /* 起點位置 */
+  }
+  to {
+    transform: translate(50px, 500px); /* 終點位置 */
+  }
+}
 #target_2 {
   position: absolute;
   top: 380px;
   left: 620px;
+  animation: move2 2s ease-in-out infinite alternate;
 }
-
+@keyframes move3 {
+  from {
+    transform: translate(10px, 100px); /* 起點位置 */
+  }
+  to {
+    transform: translate(240px, 300px); /* 終點位置 */
+  }
+}
 #target_3 {
   position: absolute;
   top: 230px;
   left: 550px;
+  animation: move3 4s ease-in-out infinite alternate;
 }
-
+@keyframes move4 {
+  from {
+    transform: translate(280px, 50px); /* 起點位置 */
+  }
+  to {
+    transform: translate(20px, 20px); /* 終點位置 */
+  }
+}
 #target_4 {
   position: absolute;
   top: 280px;
   left: 50px;
+  animation: move4 3s ease-in-out infinite alternate;
 }
-
+@keyframes move5 {
+  from {
+    transform: translate(10px, 900px); /* 起點位置 */
+  }
+  to {
+    transform: translate(250px, 5px); /* 終點位置 */
+  }
+}
 #target_5 {
   position: absolute;
-  top: 250px;
-  left: 815px;
+  top: 10px;
+  left: 900px;
+  animation: move5 5s ease-in-out infinite alternate;
 }
 
 #clickbtn {
@@ -235,13 +163,12 @@ img[alt*="shu"] {
   cursor: url("../public/image/cursor.png"), auto;
 }
 
-
 /* 特殊版的shu */
 #spshu_1 {
   position: absolute;
   top: 180px;
   left: 600px;
-  width: 23%;
+  width: 20%;
   /* z-index:9999; */
 }
 
@@ -249,7 +176,7 @@ img[alt*="shu"] {
   position: absolute;
   top: 150px;
   left: 250px;
-  width: 28%;
+  width: 20%;
   /* z-index:9999; */
 }
 
@@ -281,7 +208,7 @@ img[alt*="shu"] {
   position: absolute;
   top: 340px;
   left: 680px;
-  width: 25%;
+  width: 20%;
   /* z-index:9999; */
 }
 
@@ -308,6 +235,36 @@ img[alt*="shu"] {
   position: absolute;
   top: 450px;
   left: 600px;
+}
+
+#norshu_5 {
+  position: absolute;
+  top: 400px;
+  left: 1000px;
+  transform: rotate(180deg);
+}
+
+#norshu_6 {
+  position: flex;
+  transform: rotate(90deg);
+}
+
+#norshu_7 {
+  position: absolute;
+  top: 400px;
+  left: 1200px;
+  transform: rotate(12deg);
+}
+
+#norshu_8 {
+  position: absolute;
+  top: 200px;
+  left: 1300px;
+  transform: rotate(180deg);
+}
+
+[id^="norshu"] {
+  width: 9%;
 }
 
 /* popup page */
@@ -400,7 +357,6 @@ img[alt*="shu"] {
   z-index: 1;
 }
 
-
 @media screen and (max-width: 1200px) {
   #alertpage {
     position: absolute;
@@ -413,13 +369,12 @@ img[alt*="shu"] {
     background-color: rgba(255, 255, 255, 0.824);
     font-size: 24.5px;
   }
-  .txt-p1{
+  .txt-p1 {
     margin: 0 0 10px 0;
   }
-  .txt-p{
+  .txt-p {
     margin: 12px 0;
   }
-
 }
 
 @media screen and (min-width: 1200px) {
@@ -434,12 +389,10 @@ img[alt*="shu"] {
     background-color: rgba(255, 255, 255, 0.824);
     font-size: 30px;
   }
-  .txt-p1{
+  .txt-p1 {
     margin: 0 0 10px 0;
   }
-  .txt-p{
+  .txt-p {
     margin: 12px 0;
   }
 }
-
-
